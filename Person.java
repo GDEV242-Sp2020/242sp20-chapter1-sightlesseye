@@ -19,15 +19,7 @@ public class Person
     /**
      * Create a new person at default position with default color.
      */
-    public Person()
-    {
-        height = 60;
-        width = 30;
-        xPosition = 280;
-        yPosition = 190;
-        color = "black";
-        isVisible = false;
-    }
+    public Person(){height = 60;width = 30;xPosition = 280;yPosition = 190;color = "black";isVisible = false;}
 
     /**
      * Make this person visible. If it was already visible, do nothing.
