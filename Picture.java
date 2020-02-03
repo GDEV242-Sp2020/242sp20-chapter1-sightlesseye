@@ -11,10 +11,15 @@
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Square background;
+    private Square signpost;
+    private Square signpost2;
+    private Triangle border;
+    private Triangle sign;
+    private Person kid1;
+    private Person kid2;
+    private Circle ball;
+    
     private boolean drawn;
 
     /**
@@ -22,10 +27,21 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
+        //wall = new Square();
+        //window = new Square();
+        //roof = new Triangle();  
+        //sun = new Circle();
+        //drawn = false;
+        
+        background = new Square();
+        signpost = new Square();
+        signpost2 = new Square();
+        border = new Triangle();
+        sign = new Triangle();
+        kid1 = new Person();
+        kid2 = new Person();
+        ball = new Circle();
+        
         drawn = false;
     }
 
@@ -35,28 +51,74 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.changeColor("blue");
-            wall.makeVisible();
+            //wall.moveHorizontal(-140);
+            //wall.moveVertical(20);
+            //wall.changeSize(120);
+            //wall.changeColor("blue");
+            //wall.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
+            //window.changeColor("black");
+            //window.moveHorizontal(-120);
+            //window.moveVertical(40);
+            //window.changeSize(40);
+            //window.makeVisible();
     
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
+            //roof.changeSize(60, 180);
+            //roof.moveHorizontal(20);
+            //roof.moveVertical(-60);
+            //roof.makeVisible();
     
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            //sun.changeColor("yellow");
+            //sun.moveHorizontal(100);
+            //sun.moveVertical(-40);
+            //sun.changeSize(80);
+            //sun.makeVisible();
+            //drawn = true;
+            
+            background.moveHorizontal(-350);
+            background.moveVertical(-150);
+            background.changeSize(600);
+            background.changeColor("blue");
+            background.makeVisible();
+            
+            signpost.changeColor("black");
+            signpost.moveHorizontal(-90);
+            signpost.moveVertical(120);
+            signpost.makeVisible();
+            
+            signpost2.changeColor("blue");
+            signpost2.moveHorizontal(-60);
+            signpost2.moveVertical(120);
+            signpost2.makeVisible();
+            
+            border.changeColor("black");
+            border.moveHorizontal(25);
+            border.moveVertical(-100);
+            border.changeSize(200, 200);
+            border.makeVisible();
+            
+            sign.changeColor("yellow");
+            sign.moveHorizontal(25);
+            sign.moveVertical(-72);
+            sign.changeSize(160, 160);
+            sign.makeVisible();
+            
+            kid1.changeColor("black");
+            kid1.moveHorizontal(-80);
+            kid1.moveVertical(-10);
+            kid1.makeVisible();
+            
+            kid2.changeColor("black");
+            kid2.moveHorizontal(-10);
+            kid2.moveVertical(-10);
+            kid2.makeVisible();
+            
+            ball.changeColor("black");
+            ball.moveHorizontal(-10);
+            ball.moveVertical(40);
+            ball.changeSize(30);
+            ball.makeVisible();
+            
             drawn = true;
         }
     }
@@ -66,10 +128,15 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
+        background.changeColor("white");
+        signpost.changeColor("black");
+        signpost2.changeColor("white");
+        border.changeColor("black");
+        sign.changeColor("white");
+        kid1.changeColor("black");
+        kid2.changeColor("black");
+        ball.changeColor("black");
+        
     }
 
     /**
@@ -77,9 +144,13 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
+        background.changeColor("blue");
+        signpost.changeColor("black");
+        signpost2.changeColor("blue");
+        border.changeColor("black");
+        sign.changeColor("yellow");
+        kid1.changeColor("black");
+        kid2.changeColor("black");
+        ball.changeColor("black");
     }
 }
